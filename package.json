@@ -1,0 +1,15 @@
+{
+  "name": "grupas-darbs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "upload-minio": "node upload-minio.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "minio": "^7.0.32"
+  }
+}

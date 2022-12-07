@@ -7,9 +7,11 @@ var minioClient = new Minio.Client({
     secretKey: 'group_5IT'
 });
 minioClient.makeBucket('cars', function (err) {
-    if (err){
-        return console.log(err)
-    }  else {
-        console.log('File uploaded successfully.')
-    }
+    if (err) return console.log(err)
+    console.log('File uploaded successfully.')
+
+})
+minioClient.fPutObject('cars', 'my-car.jpg', './tmp/my-car.jpg', function (err, etag) {
+    if (err) return console.log(err)
+    console.log('File uploaded successfully.')
 });

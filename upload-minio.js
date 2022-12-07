@@ -3,8 +3,8 @@ var minioClient = new Minio.Client({
     endPoint: '127.0.0.1',
     port: 9000,
     useSSL: false,
-    accessKey: 'minioadmin',
-    secretKey: 'minioadmin'
+    accessKey: 'group_5IT',
+    secretKey: 'group_5IT'
 });
 minioClient.makeBucket('cars', function (err) {
     if (err){

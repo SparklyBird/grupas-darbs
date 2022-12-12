@@ -1,0 +1,22 @@
+{
+  "name": "grupas-darbs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "upload-minio": "node upload-minio.js",
+    "download-minio": "node download-minio.js",
+    "web-server": "node index.js",
+    "rabbit-sender": "node rabbit-sender.js",
+    "rabbit-receiver.js": "node rabbit-receiver.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.3",
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "minio": "^7.0.32"
+  }
+}

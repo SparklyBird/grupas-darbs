@@ -1,6 +1,18 @@
 version: '3.8'
 
 services:
+  rabbitmq:
+    image: bitnami/rabbitmq:latest
+    ports:
+      - 5672:5672
+      - 8080:15672
+    environment:
+      RABBITMQ_USERNAME: group_5IT
+      RABBITMQ_PASSWORD: group_5IT
+    volumes:
+      -  rabbitmq_data:/data
+
+
   minio:
     image: minio/minio:latest
     command: server --console-address ":9001" /data/
@@ -19,3 +31,4 @@ services:
       retries: 3
 volumes:
   minio-storage:
+  rabbitmq_data:

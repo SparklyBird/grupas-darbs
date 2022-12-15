@@ -13,8 +13,8 @@ services:
   rabbitmq:
     image: bitnami/rabbitmq:latest
     ports:
-      - 5672:5672
-      - 8080:15672
+      - "5672:5672"
+      - "8080:15672"
     environment:
       RABBITMQ_USERNAME: group_5IT
       RABBITMQ_PASSWORD: group_5IT

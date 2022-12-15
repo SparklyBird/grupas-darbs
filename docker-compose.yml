@@ -1,12 +1,15 @@
 version: '3.8'
 
 services:
-  open-alpr-http-wrapper:
-    container_name: open-alpr-http-wrapper
-    restart: unless-stopped
-    image: sclaflin/open-alpr-http-wrapper:latest
+  openalpr:
+    container_name: openalpr
+    image: openalpr/agent:latest
     ports:
       - "3000:3000"
+      - "8355:8355"
+    restart: always
+    cap_add:
+      - SYS_NICE
   rabbitmq:
     image: bitnami/rabbitmq:latest
     ports:
